@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --main-color: rgb(109, 49, 0);
+    --text-color: #000;
+    --color: #fff;
+} 
+
+body {
+    background: linear-gradient(to right, rgb(255,255,255), rgb(244, 217, 170));
+}
+
+header {
+    display: flex;
+    background: transparent;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0%;
+    justify-content: space-between;
+}
+
+header .logo{
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    color: var(--main-color);
+    animation: head 1s ease-in-out;    
+    text-shadow: 0 0 10px var(--main-color);
+}
+
+@keyframes head{
+    0%{
+      transform: translateY(-20px);
+    }
+    100%{
+     transform: translateY(0);
+    }
+}
+
+header .nav-setup a {
+    margin: 30px;
+    font-weight: 300;
+    font-size: 20px;    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--text-color);
+    text-decoration: none;
+    position: relative;
+    transition: width .3s linear;
+}
+
+header .nav-setup {
+    animation: nav 2s ease-in-out;
+}
+
+@keyframes nav{
+    0%{
+      transform: translateX(50px);
+    }
+    100%{
+     transform: translateX(0);
+    }
+}
+
+.nav-setup a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    top: 100%;
+    left: 0;
+    background: var(--main-color);
+} 
+
+.nav-setup a:hover::before {
+    width: 100%;
+}
+
+
+.nav-setup span{
+    padding: 9px 2px;
+    border-radius: 30px;
+    opacity:  .85;
+    transition: opacity .5s ease;
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+.nav-setup span:hover {
+    opacity: 1;
+}
+
+main .anime {
+    height: 350px;
+    width: 350px; 
+    border-radius: 200px;  
+}
+
+.content {
+    display: flex;
+    min-height: 500px;
+    animation: intro 1.5s ease-in-out;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.text {
+    margin-left: 30px;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+}
+
+.wrap {
+    position: absolute;
+    left: 20%;
+    padding: 10px;
+}
+
+.text .span {
+    display: block;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.style {
+    color: var(--main-color);
+    display: inline;
+    text-shadow: 0 0 10px var(--main-color);
+}
+
+.icon {
+    margin-top: 10px;
+}
+
+.icon button {
+    background: transparent;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    transition: box-shadow .5s ease;
+    border: 2px solid var(--main-color);
+    border-radius: 200px;
+}
+
+button i {
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    color: var(--main-color);
+}
+
+button:hover {
+    color: var(--color);
+    background: transparent;
+    z-index: 100;
+    box-shadow: 2px 2px 10px var(--main-color);    
+}
+
+.submit {
+    padding: 10px 30px;
+    color: var(--color);
+    margin-top: 10px;
+    background: var(--main-color);
+    border: none;
+    font-size: 20px;
+    font-weight: 300;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.submit:hover {
+    color: var(--main-color);
+    background: var(--color);
+    box-shadow: 2px 2px 10px var(--main-color);
+    border: 2px solid var(--main-color);
+}
+
+@keyframes intro {
+    0%{
+         transform: translateY(-50px);
+         opacity: 0;
+
+    }
+
+    100%{
+         transform: translateY(0);
+         opacity: 1;
+    }
+}
+
+@media (min-width: 1623px) {
+  .wrap{
+    position: absolute;
+    left: 20%;
+    top: 10%;
+    padding: 10px;    
+  }
+
+  .text span{
+    font-size: 40px;
+    font-weight: 500;    
+  }
+
+  p {
+    font-size: 30px;
+    font-weight: 300;
+  }
+ main .anime {
+    height: 400px;
+    width: 400px; 
+    border-radius: 200px;  
+}  
+
+.text {
+    margin-left: 20px;
+    position: absolute;
+    left: 45%;
+    top: 20%;
+}
+
+.icon button {
+    background: transparent;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    transition: box-shadow .5s ease;
+    border: 2px solid var(--main-color);
+    border-radius: 200px;
+}
+
+button i {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    color: var(--main-color);
+}
+
+.submit {
+    padding: 20px 40px;
+    color: var(--color);
+    margin-top: 15px;
+    background: var(--main-color);
+    border: none;
+    font-size: 20px;
+    font-weight: 300;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.content {
+   position: absolute;
+   bottom: 20%;
+}
+
+header .logo{
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 35px;
+    color: var(--main-color);
+    text-shadow: 0 0 10px var(--main-color);
+}
+
+header .nav-setup a {
+    margin: 30px;
+    font-weight: 500;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--text-color);
+    text-decoration: none;
+    position: relative;
+    transition: width .3s linear;
+}
+
+.submit {
+    padding: 20px 45px;
+    padding: 20px 45px;
+    padding: 20px 45px;
+    padding: 20px 45px;
+    color: var(--color);
+    margin-top: 10px;
+    background: var(--main-color);
+    border: none;
+    font-size: 20px;
+    font-weight: 300;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+}
