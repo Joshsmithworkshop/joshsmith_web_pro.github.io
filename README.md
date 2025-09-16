@@ -1,2 +1,2 @@
-# joshsmith_web_pro.github.io
+#portfolio
 My personal portfolio website built with HTML/CSS
